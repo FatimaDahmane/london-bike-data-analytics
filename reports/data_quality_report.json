@@ -12,22 +12,22 @@
   "exact_duplicate_input_rows": 0,
   "output_files": {
     "processed": {
-      "path": "C:\\Users\\dahma\\OneDrive\\Bureau\\Projets\\london-bike-data-platform\\data\\processed\\bike_trips.parquet",
+      "path": "C:\\Users\\dahma\\OneDrive\\Bureau\\Projets\\london-bike-data-analytics\\data\\processed\\bike_trips.parquet",
       "exists": true,
       "size_bytes": 9267325,
-      "last_modified": "2026-10-25T11:06:16.085985+01:00"
+      "last_modified": "2026-10-25T14:59:22.251906+01:00"
     },
     "rejected": {
-      "path": "C:\\Users\\dahma\\OneDrive\\Bureau\\Projets\\london-bike-data-platform\\data\\rejected\\rejected_trips.parquet",
+      "path": "C:\\Users\\dahma\\OneDrive\\Bureau\\Projets\\london-bike-data-analytics\\data\\rejected\\rejected_trips.parquet",
       "exists": true,
       "size_bytes": 237486,
-      "last_modified": "2026-10-25T11:06:16.106631+01:00"
+      "last_modified": "2026-10-25T14:59:22.272680+01:00"
     },
     "destination_analysis": {
-      "path": "C:\\Users\\dahma\\OneDrive\\Bureau\\Projets\\london-bike-data-platform\\data\\processed\\bike_trips_with_destinations.parquet",
+      "path": "C:\\Users\\dahma\\OneDrive\\Bureau\\Projets\\london-bike-data-analytics\\data\\processed\\bike_trips_with_destinations.parquet",
       "exists": true,
       "size_bytes": 9267325,
-      "last_modified": "2026-10-25T11:06:16.832975+01:00"
+      "last_modified": "2026-10-25T14:59:23.202075+01:00"
     }
   }
 }
