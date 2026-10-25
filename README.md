@@ -32,7 +32,7 @@ This is an independent portfolio project and is not an official TfL product.
 
 The dashboard provides an interactive way to explore the processed trip data.
 
-![London Bike Sharing Dashboard](docs/images/dashboard-overview.png)
+![London Bike Sharing Dashboard](docs/images/dashboard_overview.png)
 
 ## Results
 
