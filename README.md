@@ -26,7 +26,7 @@ The data was obtained from the [Transport for London (TfL) Cycling Data portal](
 
 The analysis mainly covers trips starting between 1 May and 31 May 2026. Three additional records start at midnight on 1 June 2026.
 
-This is an independent portfolio project and is not an official TfL product. Please check the [TfL Open Data guidance](https://tfl.gov.uk/info-for/open-data-users/our-open-data) and applicable [Transport Data Service terms](https://tfl.gov.uk/corporate/terms-and-conditions/transport-data-service) for attribution and usage requirements.
+This is an independent portfolio project and is not an official TfL product. 
 
 ## Dashboard
 
@@ -186,25 +186,67 @@ Running the pipeline may overwrite existing outputs. Back up any files you want 
 ```text
 london-bike-data-analytics/
 ├── data/
-│   ├── raw/
-│   ├── processed/
-│   └── rejected/
-├── scripts/
-│   └── run_pipeline.py
-├── reports/
-│   ├── figures/
-│   └── data_quality_report.json
+│   ├── raw/                         # Source CSV files (not committed)
+│   ├── processed/                   # Cleaned Parquet datasets
+│   ├── rejected/                    # Rejected trip records
+│   └── analytics.duckdb             # DuckDB database
 ├── docs/
 │   └── images/
-│       └── dashboard-overview.png
+│       └── dashboard_overview.png
+├── notebooks/
+│   └── exploratory_analysis.ipynb
+├── reports/
+│   ├── figures/
+│   │   ├── bike_model_usage.png
+│   │   ├── daily_trips.png
+│   │   ├── duration_by_weekday.png
+│   │   ├── duration_distribution.png
+│   │   ├── hourly_weekday_weekend.png
+│   │   ├── station_flow_heatmap.png
+│   │   ├── station_net_balance.png
+│   │   ├── top_departure_stations.png
+│   │   ├── trips_by_hour.png
+│   │   └── weekday_vs_weekend.png
+│   ├── business_findings.md
+│   ├── data_quality.md
+│   └── data_quality_report.json
+├── scripts/
+│   ├── run_pipeline.py
+│   ├── run_sql_analysis.py
+│   ├── create_visualizations.py
+│   └── __init__.py
+├── sql/
+│   ├── 01_final_quality_check.sql
+│   ├── 02_demand_by_time.sql
+│   ├── 03_station_analysis.sql
+│   ├── 04_date_coverage_check.sql
+│   ├── 05_duplicate_check.sql
+│   └── 06_business_insights.sql
+├── src/
+│   ├── bike_data/
+│   │   ├── export.py
+│   │   ├── ingestion.py
+│   │   ├── transformations.py
+│   │   ├── validation.py
+│   │   └── __init__.py
+│   └── __init__.py
 ├── tests/
+│   ├── test_quality_checks.py
+│   ├── test_transformations.py
+│   └── test_validation.py
+├── check_environment.py
 ├── dashboard.py
 ├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
 
-This is an overview of the main project structure. Some files are generated when the pipeline or visualisation scripts are run.
+**Notes:**
+- Raw CSV files are required to run the pipeline but are excluded from Git.
+- Processed datasets, the DuckDB database and generated reports may be created locally when running the project.
+- The `sql/` directory contains queries for data quality checks, demand analysis, station analysis and business insights.
+- The `tests/` directory contains automated tests for data quality, transformations and validation.
+- Python cache files and local test cache files are omitted from this overview.
 
 ## Getting Started
 
