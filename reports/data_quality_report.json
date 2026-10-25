@@ -1,0 +1,33 @@
+{
+  "input_rows": 863017,
+  "retained_rows": 858898,
+  "rejected_rows": 4119,
+  "modified_rows": 858898,
+  "destination_analysis_rows": 858898,
+  "rejection_reasons": {
+    "duration_below_60_seconds": 4119
+  },
+  "modified_rows_definition": "Retained rows enriched with derived duration fields; this count can overlap with retained_rows.",
+  "negative_duration_rows": 0,
+  "exact_duplicate_input_rows": 0,
+  "output_files": {
+    "processed": {
+      "path": "C:\\Users\\dahma\\OneDrive\\Bureau\\Projets\\london-bike-data-platform\\data\\processed\\bike_trips.parquet",
+      "exists": true,
+      "size_bytes": 9267325,
+      "last_modified": "2026-10-25T11:06:16.085985+01:00"
+    },
+    "rejected": {
+      "path": "C:\\Users\\dahma\\OneDrive\\Bureau\\Projets\\london-bike-data-platform\\data\\rejected\\rejected_trips.parquet",
+      "exists": true,
+      "size_bytes": 237486,
+      "last_modified": "2026-10-25T11:06:16.106631+01:00"
+    },
+    "destination_analysis": {
+      "path": "C:\\Users\\dahma\\OneDrive\\Bureau\\Projets\\london-bike-data-platform\\data\\processed\\bike_trips_with_destinations.parquet",
+      "exists": true,
+      "size_bytes": 9267325,
+      "last_modified": "2026-10-25T11:06:16.832975+01:00"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets and environment variables
+.env
+.env.*
+!.env.example
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Local DuckDB databases
+*.duckdb
+*.duckdb.wal
+
+# Raw input data
+data/raw/*
+
+# Processed and rejected datasets
+data/processed/*
+data/rejected/*
+
+# Preserve directory structure
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/rejected/.gitkeep
+
+data/*.duckdb
+data/*.duckdb.wal
